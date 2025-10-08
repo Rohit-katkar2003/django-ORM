@@ -1,0 +1,25 @@
+
+to create the Core folder use command ` python manage.py startapp core`
+- it creates the folder called core then in main app (orm_django) in folder in settings add installed apps list add django_extensions & core 
+- to understand models go on https://docs.djangoproject.com/en/5.2/topics/db/models/ 
+
+- if you create models in core/models.py but if you want to propagrate changes to database u have to use migrations. 
+    - migrate, which is responsible for applying and unapplying migrations.
+    migrate in simple : After running makemigrations, when you’re ready to update the database.
+    command :- `python manage.py migrate`
+
+    - makemigrations, which is responsible for creating new migrations based on the changes you have made
+     to your models.
+     makemigrations in simple : Whenever you change models.py (add, delete, or modify a model field). 
+     command :- `python manage.py makemigrations`
+
+    - keep in mind everytime update first do makemigrations then migrate 
+
+- in core/admin.py register all the models's(tables) which are build. 
+    then if you wan to create the superuser use command --> `python manage.py createsuperuser` 
+
+
+
+## in core we created scripts folder where it help to run script
+    - here we add the data in tables which we created in models.py 
+    - if you want to run the script use `python manage.py runscript orm_script`
