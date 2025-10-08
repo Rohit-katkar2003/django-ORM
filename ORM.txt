@@ -22,4 +22,9 @@ to create the Core folder use command ` python manage.py startapp core`
 
 ## in core we created scripts folder where it help to run script
     - here we add the data in tables which we created in models.py 
-    - if you want to run the script use `python manage.py runscript orm_script`
+    - if you want to run the script use `python manage.py runscript orm_script` 
+    - in script.py file there is always run() is there   
+    - **Restaurant.objects**: this is the django manager for database related task
+    - Restaurant.objects.all() this is for retrieving all the data from database 
+    - Restaurant.objects.first() this is for to get first row of database 
+    - to querying the database in command prompt use command `python manage.py shell_plus --print-sql
